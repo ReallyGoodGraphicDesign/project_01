@@ -9,7 +9,7 @@ function ContentSection({ title, subtitle, children }) {
         {subtitle ? <p className="max-w-2xl text-sm text-lime-950 sm:text-base">{subtitle}</p> : null}
       </header>
       <div className="space-y-5 text-slate-300">{children}</div>
-    </section>
+    </section> 
   )
 }
 

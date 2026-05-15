@@ -25,7 +25,7 @@ function App() {
               Use this section for introductions, summaries, or short narrative text. The component handles structure and styling so the content itself remains the focus.
             </p>
             <p>
-              Because the component contains all its styling internally, each instance remains simple and easy to reuse across pages or layouts.
+              Because the component contains all its styling ijjjnternally, each instance remains simple and easy to reuse across pages or layouts.
             </p>
           </ContentSection>
 

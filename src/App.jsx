@@ -9,7 +9,7 @@ function App() {
           Content system
         </p>
           <h1 className="text-5xl font-semibold tracking-tight text-white sm:text-6xl">
-            Reusable content sections for your app
+            Reusable content sections for your app!!!!!
           </h1>
           <p className="mx-auto max-w-3xl text-base text-slate-400 sm:text-lg">
             This page demonstrates a modern, consistent content container that can hold text, lists, and other nested elements without extra styling on each instance.

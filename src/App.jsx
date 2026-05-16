@@ -3,7 +3,7 @@ import ContactForm from './ContactForm.jsx'
 
 function App() { 
   return (
-    <div className="min-h-screen bg-zinc-400 text-zinc-200">
+    <div className="min-h-screen bg-zinc-400  text-zinc-200">
       <main className="mx-auto flex min-h-screen max-w-6xl flex-col gap-10 px-6 py-10 sm:px-8">
         <header className="space-y-4 text-center">
           <p className="inline-flex rounded-full bg-lime-500 px-3 py-1 text-xs font-semibold uppercase tracking-[0.92em] text-white">

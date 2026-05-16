@@ -19,7 +19,7 @@ function App() {
 
         <div className="grid gap-8">
           <ContentSection            
-          title="Title typed in App.jsx"
+          title="Time: 2040"
             subtitle="Subtitle typed in App.jsx"
             text="Body typed in App.jsx"
           />

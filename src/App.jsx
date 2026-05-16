@@ -1,7 +1,7 @@
 import ContentSection from './ContentSection.jsx'
 import ContactForm from './ContactForm.jsx'
 
-function App() { 
+function App() {  
   return (
     <div className="min-h-screen bg-zinc-400  text-zinc-200">
       <main className="mx-auto flex min-h-screen max-w-6xl flex-col gap-10 px-6 py-10 sm:px-8">

@@ -1,6 +1,6 @@
 import TextStyleSectionId from './TextStyleSectionId.jsx'
 import TextStyleSectionTitle from './TextStyleSectionTitle.jsx'
-import TextStyleSectionSubtitle from './TextStyleSectionSubtitle.jsx'
+import TextStyleSectionSubtitle from './TextStyleSectionSubtitle.jsx' 
 import TextStyleBody from './TextStyleBody.jsx'
 
 function ContentSection({ title, subtitle, children, text }) {

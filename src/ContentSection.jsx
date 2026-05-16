@@ -8,7 +8,7 @@ function ContentSection({ title, subtitle, children, text }) {
     <section className="rounded-[0.25rem] bg-zinc-500 p-4 shadow-[0_20px_80px_-40px_rgba(15,23,42,0.9)] transition duration-300 hover:-translate-y-0.5 hover:bg-zinc-600 sm:p-10">
       <header className="mb-6 flex flex-col gap-2">
         <TextStyleSectionId
-                children="Section ID typed in ContentSection.jsx"/>
+                children="Section Name"/>
 
         {title ? <TextStyleSectionTitle>{title}</TextStyleSectionTitle> : null}
 

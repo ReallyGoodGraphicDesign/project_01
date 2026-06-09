@@ -1,12 +1,13 @@
 import { useState } from 'react';
 
 const navItems = [
-  { href: '#section-1', label: 'Tab One' },
-  { href: '#section-2', label: 'Tab Two' },
+  { href: '#chart-1', label: 'Chart' },
+  { href: '#map-1', label: 'Map' },
   { href: '#section-3', label: 'Tab Three' },
   { href: '#section-4', label: 'Tab Four' },
   { href: '#section-5', label: 'Tab Five' },
   { href: '#section-6', label: 'Tab Six' },
+  { href: '#contact_form', label: 'Contact' },
 ];
 
 function HamburgerIcon() {
@@ -54,8 +55,8 @@ function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-[1100] w-full bg-zinc-800 text-zinc-100 shadow-[0_4px_10px_rgba(0,0,0,0.15)]">
-      <div className="mx-auto flex h-11 w-full items-center justify-between px-1 max-lg:justify-end">
+    <header className="sticky top-0 z-[1100] w-full bg-zinc-400 text-zinc-100 shadow-[0_10px_50px_rgba(0,0,0,1)]">
+      <div className="mx-auto flex h-11 w-full items-center justify-between px-0 max-lg:justify-end">
         <nav className="hidden h-full flex-1 items-center justify-around uppercase lg:flex">
           {navItems.map(({ href, label }) => (
             <a

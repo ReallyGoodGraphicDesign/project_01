@@ -19,57 +19,71 @@ function App() {
           </p>
         </header>
         <div className="grid gap-8">
-          <ContentSection1
-          id="section-chart"
-          group="CS1: data from a Google sheet via /api/data"
-            title="Monthly chart"
-            subtitle="Recharts, fed by a Cloudflare Pages Function proxy"
-          >
-            <Chart1 />
-          </ContentSection1>
-          <ContentSection1
-          id="section-1"
-          group="CS1 group name typed in app; varies per instance"
-          title="Title (typed in app)"
-            subtitle="Subtitle (typed in app)"
-            text="Body text (typed in app)"
-          />
-          <ContentSection2
-          id="section-2"
-          title="Title (typed in app)"
-            subtitle="Subtitle (typed in app)"
-            text="Body text (typed in app)"
-          />
-          <ContentSection1
-          id="section-3"
-          group="CS1 group name typed in app. See? Different!"
-            title="Form"
-            subtitle="Please contact me - PLEASE. It's important."
-          >
-            <ContactForm />
-          </ContentSection1>
 
-          <ContentSection1
-          id="section-4"
-          group="CS1: Typed in app; varies per instance. Different, see?"
-            title="Pin map"
-            subtitle="Leaflet + OpenStreetMap, centered on Portland"
-          >
-            <PinMap />
-          </ContentSection1>
-          <ContentSection1
-          id="section-5"
-          group="This is typed in app"
-          title="Title (typed in app)"
-            subtitle="App: Subtitle"
-            text="App: Body"
-          />
-          <ContentSection2
-          id="section-6"
-          title="Title (typed in app)"
-            subtitle="App: Subtitle"
-            text="App: Body"
-          />
+
+                <ContentSection1
+                id="chart-1"
+                group="CS1: Each instance can have unique group name"
+                title="Chart One"
+                subtitle="Recharts, fed by a Cloudflare Pages Function proxy" >
+                        <Chart1 />
+                </ContentSection1>
+
+
+
+                <ContentSection1
+                id="map-1"
+                group="CS1: Typed in app; varies per instance. Different, see?"
+                title="Pin map"
+                subtitle="Leaflet + OpenStreetMap, centered on Portland" >
+                        <PinMap />
+                </ContentSection1>
+
+
+
+                <ContentSection1
+                id="section-3"
+                group="CS1 group name typed in app; varies per instance"
+                title="Title (typed in app)"
+                subtitle="Subtitle (typed in app)"
+                text="Body text (typed in app)" />
+
+
+
+                <ContentSection2
+                id="section-4"
+                title="Title (typed in app)"
+                subtitle="Subtitle (typed in app)"
+                text="Body text (typed in app)" />
+
+
+
+                <ContentSection1
+                id="section-5"
+                group="This is typed in app"
+                title="Title (typed in app)"
+                subtitle="App: Subtitle"
+                text="App: Body" />
+
+
+
+                <ContentSection2
+                id="section-6"
+                title="Title (typed in app)"
+                subtitle="App: Subtitle"
+                text="App: Body" />
+
+
+
+                <ContentSection1
+                id="contact_form"
+                group="CS1 group name typed in app. See? Different!"
+                title="Form"
+                subtitle="Please contact me. PLEASE - it's important." >
+                        <ContactForm />
+                </ContentSection1>
+
+
 
         </div>
       </main>

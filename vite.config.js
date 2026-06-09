@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/template_1/',
+  // CF Pages serves at the domain root. (On GH Pages this was '/template_1/'.)
+  base: '/',
   plugins: [react(), tailwindcss()],
 })

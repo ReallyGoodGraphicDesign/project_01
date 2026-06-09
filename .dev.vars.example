@@ -1,0 +1,7 @@
+# Local-only secrets for `npm run dev:full` (wrangler reads .dev.vars).
+# Copy this file to `.dev.vars` and fill in your Apps Script web app URL.
+# `.dev.vars` is gitignored and never deployed. In production, set SHEET_URL
+# as a secret in the Cloudflare Pages dashboard instead.
+#
+# Leave SHEET_URL unset to fall back to the built-in sample data.
+SHEET_URL=

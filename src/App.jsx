@@ -5,7 +5,7 @@ import ContactForm from './ContactForm.jsx'
 import PinMap from './PinMap.jsx'
 import Chart1 from './Chart1.jsx'
 
-function App() {
+function App() { 
   return (
     <div className="min-h-screen bg-zinc-400">
       <Header />

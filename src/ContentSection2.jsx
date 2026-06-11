@@ -11,9 +11,7 @@ function ContentSection2({ id, title, subtitle, children, text, className = " " 
                 children="Every instance of CS2 says this!" 
         />
         {title ? <TextStyleSectionTitle>{title}</TextStyleSectionTitle> : null}
-
         {subtitle ? <TextStyleSectionSubtitle>{subtitle}</TextStyleSectionSubtitle> : null}
-
       </header>
       <div className="mt-4">
         {text ? <TextStyleBody>{text}</TextStyleBody> : children}

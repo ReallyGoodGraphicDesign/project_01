@@ -3,7 +3,8 @@ import ContentSection1 from './ContentSection1.jsx'
 import ContentSection2 from './ContentSection2.jsx'
 import ContactForm from './ContactForm.jsx'
 import PinMap from './PinMap.jsx'
-import Chart1 from './Chart1.jsx'
+import Chart1Bar from './Chart1Bar.jsx'
+import Chart2Line from './Chart2Line.jsx'
 
 function App() { 
   return (
@@ -15,7 +16,7 @@ function App() {
             Reusable content sections
           </h1>
           <p className="mx-auto max-w-3xl text-base text-zinc-100 sm:text-lg">
-            This page demonstrates...
+            The header (the links), above, is a component. The title directly above this text, and this text, and all of the content sections are in a 'main' element - there is no 'main' component. 
           </p>
         </header>
         <div className="grid gap-8">
@@ -24,12 +25,18 @@ function App() {
                 <ContentSection1
                 id="chart-1"
                 group="CS1: Each instance can have unique group name"
-                title="Chart One"
+                title="Chart One - Bar"
                 subtitle="Recharts, fed by a Cloudflare Pages Function proxy" >
-                        <Chart1 />
+                        <Chart1Bar />
                 </ContentSection1>
 
-
+                <ContentSection1
+                id="chart-2"
+                group="CS1: Each instance can have unique group name"
+                title="Chart Two - Line"
+                subtitle="Recharts, fed by a Cloudflare Pages Function proxy" >
+                        <Chart2Line />
+                </ContentSection1>
 
                 <ContentSection1
                 id="map-1"
@@ -39,8 +46,6 @@ function App() {
                         <PinMap />
                 </ContentSection1>
 
-
-
                 <ContentSection1
                 id="section-3"
                 group="CS1 group name typed in app; varies per instance"
@@ -48,15 +53,11 @@ function App() {
                 subtitle="Subtitle (typed in app)"
                 text="Body text (typed in app)" />
 
-
-
                 <ContentSection2
                 id="section-4"
                 title="Title (typed in app)"
                 subtitle="Subtitle (typed in app)"
                 text="Body text (typed in app)" />
-
-
 
                 <ContentSection1
                 id="section-5"
@@ -65,15 +66,11 @@ function App() {
                 subtitle="App: Subtitle"
                 text="App: Body" />
 
-
-
                 <ContentSection2
                 id="section-6"
                 title="Title (typed in app)"
                 subtitle="App: Subtitle"
                 text="App: Body" />
-
-
 
                 <ContentSection1
                 id="contact_form"

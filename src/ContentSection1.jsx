@@ -9,9 +9,7 @@ function ContentSection({ id, group, title, subtitle, children, text, className 
       <header className="mb-6 flex flex-col gap-2">
         {group ? <TextStyleSectionGroup>{group}</TextStyleSectionGroup> : null}
         {title ? <TextStyleSectionTitle>{title}</TextStyleSectionTitle> : null}
-
         {subtitle ? <TextStyleSectionSubtitle>{subtitle}</TextStyleSectionSubtitle> : null}
-
       </header>
       <div className="mt-4">
         {text ? <TextStyleBody>{text}</TextStyleBody> : children}

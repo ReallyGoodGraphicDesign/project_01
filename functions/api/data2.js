@@ -12,12 +12,12 @@
 // renders immediately in local dev before the Apps Script endpoint exists.
 // Production should ALWAYS have the secret set; this is a dev convenience.
 const SAMPLE = [
-  { month: "Jan", value: 120 },
-  { month: "Feb", value: 145 },
-  { month: "Mar", value: 132 },
-  { month: "Apr", value: 168 },
-  { month: "May", value: 190 },
-  { month: "Jun", value: 175 },
+  { fruit: "This", value: 100 },
+  { fruit: "is", value: 20 },
+  { fruit: "all", value: 100 },
+  { fruit: "just", value: 20 },
+  { fruit: "sample", value: 100 },
+  { fruit: "data", value: 20 },
 ];
 
 export async function onRequestGet({ env }) {

@@ -7,7 +7,7 @@
  * columns in the sheet and this needs no changes.
  *
  * A sheet of:
- *     Month | Value
+ *     Month | 2
  *     Jan   | 120
  *     Feb   | 145
  * becomes:
@@ -27,7 +27,7 @@
  */
 function doGet() {
   const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
-  const rows = sheet.getDataRange().getValues();
+  const rows = sheet.getDataRange().get2s();
   const headers = rows.shift().map((h) => String(h).trim().toLowerCase());
 
   const data = rows

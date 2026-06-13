@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 const navItems = [
-  { href: '#chart-1', label: 'Chart' },
-  { href: '#map-1', label: 'Map' },
+  { href: '#chart-1', label: 'Charts' },
+  { href: '#map-1', label: 'Maps' },
   { href: '#section-3', label: 'Tab Three' },
   { href: '#section-4', label: 'Tab Four' },
   { href: '#section-5', label: 'Tab Five' },
@@ -54,57 +54,75 @@ function Header() {
     setMenuOpen(false);
   };
 
-  return (
-    <header className="sticky top-0 z-[1100] w-full bg-zinc-400 text-zinc-100 shadow-[0_10px_50px_rgba(0,0,0,1)]">
-      <div className="mx-auto flex h-11 w-full items-center justify-between px-0 max-lg:justify-end">
-        <nav className="hidden h-full flex-1 items-center justify-around uppercase lg:flex">
-          {navItems.map(({ href, label }) => (
-            <a
-              key={href}
-              href={href}
-              className="h-full flex-1 pt-[13px] text-center leading-tight text-zinc-100 no-underline transition-colors duration-500 hover:bg-white/10 active:bg-white/20"
-            >
-              {label}
-            </a>
-          ))}
-        </nav>
-        <button
-          type="button"
-          className="flex items-center p-1 text-zinc-100 lg:hidden"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
-        >
-          <HamburgerIcon />
-        </button>
-      </div>
+return (
+<header 
+className="
+sticky 
+top-0 
+z-[1100] 
+w-full 
+bg-zinc-400 
+text-zinc-100 
+shadow-[0_10px_50px_rgba(0,0,0,.5)]
+">
+	<div 
+	className="
+	mx-auto 
+	flex 
+	h-11 
+	w-full 
+	items-center 
+	justify-between 
+	px-0 
+	max-lg:justify-end
+	">
+		<nav className="hidden h-full flex-1 items-center justify-around uppercase lg:flex">
+		{navItems.map(({ href, label }) => (
+			<a
+			key={href}
+			href={href}
+			className="h-full flex-1 pt-[13px] text-center leading-tight text-zinc-100 no-underline transition-colors duration-500 hover:bg-orange-700 active:bg-white/20"
+			>
+				{label}
+			</a>
+		))}
+		</nav>
+		<button
+		type="button"
+		className="flex items-center p-1 text-zinc-100 lg:hidden"
+		onClick={() => setMenuOpen(true)}
+		aria-label="Open menu"
+		>
+			<HamburgerIcon />
+		</button>
+	</div>
 
-      {menuOpen && (
-        <div className="fixed inset-0 z-[2000] flex flex-col items-center justify-center bg-zinc-900">
-          <button
-            type="button"
-            className="absolute right-4 top-4 flex items-center p-1 text-zinc-100"
-            onClick={() => setMenuOpen(false)}
-            aria-label="Close menu"
-          >
-            <CloseIcon />
-          </button>
-
-          <nav className="flex flex-col gap-5 text-center">
-            {navItems.map(({ href, label }) => (
-              <a
-                key={href}
-                href={href}
-                onClick={handleNavClick}
-                className="mb-5 text-2xl uppercase text-zinc-100 no-underline"
-              >
-                {label}
-              </a>
-            ))}
-          </nav>
-        </div>
-      )}
-    </header>
-  );
+	{menuOpen && (
+	<div className="fixed inset-0 z-[2000] flex flex-col items-center justify-center bg-zinc-900">
+		<button
+		type="button"
+		className="absolute right-4 top-4 flex items-center p-1 text-zinc-100"
+		onClick={() => setMenuOpen(false)}
+		aria-label="Close menu"
+		>
+			<CloseIcon />
+		</button>
+		<nav className="flex flex-col gap-5 text-center">
+		{navItems.map(({ href, label }) => (
+			<a
+			key={href}
+			href={href}
+			onClick={handleNavClick}
+			className="mb-5 text-2xl uppercase text-zinc-100 no-underline"
+			>
+				{label}
+			</a>
+		))}
+		</nav>
+	</div>
+)}
+</header>
+);
 }
 
 export default Header;

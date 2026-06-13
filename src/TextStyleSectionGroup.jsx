@@ -1,6 +1,6 @@
-export default function TextStyleSectionGroup({ children }) {
+export default function TextStyleSectionGroup({ children, hidden }) {
         return (
-                <p className="inline-flex rounded-full bg-lime-500 px-3 py-1 text-xs font-semibold uppercase tracking-[0.92em] text-white">
+                <p className={hidden ? 'hidden' : 'inline-flex rounded-full bg-lime-500 px-3 py-1 text-[.75rem] font-semibold uppercase tracking-[0.5em] text-white'}>
                         {children}
                 </p>
         )

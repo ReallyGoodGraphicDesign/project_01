@@ -5,7 +5,20 @@ import TextStyleBody from './TextStyleBody.jsx'
 
 function ContentSection({ id, group, title, subtitle, children, text, className = " " }) {
   return (
-    <section id={id} className={`scroll-mt-16 rounded-[0.25rem] bg-zinc-500 p-4 shadow-[0_20px_80px_-40px_rgba(15,23,42,0.9)] transition duration-300 hover:-translate-y-0.5 hover:bg-zinc-600 sm:p-10 ${className}`}>
+    <section id={id} 
+	className={`
+	scroll-mt-[76px] 
+	rounded-[0.25rem] 
+	bg-zinc-500 
+	hover:bg-zinc-500/80 
+	p-4 
+	shadow-[0px_20px_30px_-10px]
+	shadow-zinc-600 
+	transition 
+	duration-300 
+	hover:-translate-y-[1px] 
+	sm:p-10 
+	${className}`}>
       <header className="mb-6 flex flex-col gap-2">
         {group ? <TextStyleSectionGroup>{group}</TextStyleSectionGroup> : null}
         {title ? <TextStyleSectionTitle>{title}</TextStyleSectionTitle> : null}

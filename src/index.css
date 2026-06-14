@@ -30,3 +30,16 @@ text-transform: uppercase;
 * {
   box-sizing: border-box;
 }
+
+/* Chart tooltip: fade the content in each time it switches to a new point.
+   Re-fires because CustomTooltip keys its root on the label, remounting it. */
+@keyframes tooltipFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Gap between each legend swatch and its label (all Recharts legends).
+   !important because Recharts sets the icon's margin inline. */
+.recharts-legend-item svg {
+  margin-right: 12px !important;
+}

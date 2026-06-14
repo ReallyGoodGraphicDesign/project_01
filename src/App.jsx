@@ -5,6 +5,7 @@ import ContactForm from './ContactForm.jsx'
 import PinMap from './PinMap.jsx'
 import Chart1Bar from './Chart1Bar.jsx'
 import Chart2Line from './Chart2Line.jsx'
+import Chart3Pie from './Chart3Pie.jsx'
 
 function App() { 
 return (
@@ -22,8 +23,8 @@ px-6
 py-10 
 sm:px-8"
 >
-<header className="space-y-4 text-center">
-<h1 
+<header  className="space-y-4 text-center">
+<h1  
 className="
 text-5xl 
 font-semibold 
@@ -33,7 +34,7 @@ sm:text-6xl
 ">
 Reusable content sections
 </h1>
-<p 
+<p  
 className=" 
 mx-auto 
 max-w-3xl 
@@ -48,6 +49,7 @@ The header (the links), above, is a component. The title directly above this tex
 
 
 <ContentSection1
+
 id="chart-1"
 group="CS1 text varies 111"
 title="Chart One - Bar"
@@ -56,11 +58,20 @@ subtitle="Recharts, fed by a Cloudflare Pages Function proxy" >
 </ContentSection1>
 
 <ContentSection2 
+
 id="chart-2"                
 title="Chart Two - Line"
 subtitle="Recharts, fed by a Cloudflare Pages Function proxy" >
 <Chart2Line />
 </ContentSection2>
+
+<ContentSection1
+id="chart-3"
+group="CS1 text varies"
+title="Chart Three - Pie"
+subtitle="Recharts, fed by a Cloudflare Pages Function proxy" >
+<Chart3Pie />
+</ContentSection1>
 
 <ContentSection1 
                  

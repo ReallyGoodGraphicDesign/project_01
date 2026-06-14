@@ -2,7 +2,7 @@ const readCssVar = (name) =>
   getComputedStyle(document.documentElement).getPropertyValue(name).trim()
 
 // AXIS
-// axis line & tick color
+// axis line, tick, labels color
 export const axisColor = readCssVar('--color-zinc-300')
 // add little padding L&R of x-axis labels
 export const xAxisPaddingLess = { left: 10, right: 10}
@@ -26,4 +26,24 @@ export const lineWidth = 3
 // CARTESIAN GRID
 // grid line color
 export const gridColor = readCssVar('--color-zinc-600')
+
+// DATA LABELS
+// label color
+export const labelColor = readCssVar('--color-zinc-300')
+
+// TOOLTIP
+// cursor color
+export const cursorColor = readCssVar('--color-zinc-200')
+
+// PIE
+// slice colors, cycled across slices (one per data point)
+export const pieColors = [
+  readCssVar('--color-cyan-700'),
+  readCssVar('--color-cyan-500'),
+  readCssVar('--color-lime-600'),
+  readCssVar('--color-lime-900'),
+  readCssVar('--color-zinc-500'),
+  readCssVar('--color-zinc-300'),
+]
+
 

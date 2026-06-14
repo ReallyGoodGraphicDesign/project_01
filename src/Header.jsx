@@ -56,6 +56,7 @@ function Header() {
 
 return (
 <header 
+
 className="
 sticky 
 top-0 
@@ -76,12 +77,23 @@ shadow-[0_10px_50px_rgba(0,0,0,.5)]
 	px-0 
 	max-lg:justify-end
 	">
-		<nav className="hidden h-full flex-1 items-center justify-around uppercase lg:flex">
+		<nav className=" h-full flex-1 items-center justify-around uppercase lg:flex">
 		{navItems.map(({ href, label }) => (
 			<a
 			key={href}
 			href={href}
-			className="h-full flex-1 pt-[13px] text-center leading-tight text-zinc-100 no-underline transition-colors duration-500 hover:bg-orange-700 active:bg-white/20"
+			className="
+			h-full 
+			flex-1 
+			pt-[13px] 
+			text-center 
+			leading-tight 
+			text-zinc-100 
+			no-underline 
+			transition-colors 
+			duration-500 
+			hover:bg-orange-700 
+			active:bg-white/20"
 			>
 				{label}
 			</a>

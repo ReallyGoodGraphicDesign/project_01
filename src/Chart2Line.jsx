@@ -12,11 +12,13 @@ import {
 	axisColor, 
 	gridColor, 
 	barColor,
-	xAxisPaddingLess,	 
+	xAxisPaddingLess,
 	xAxisPaddingMore,
 	lineColor,
-	lineWidth
+	lineWidth,
+	cursorColor
 } from './chartTheme.js'
+import CustomTooltip from './CustomTooltip.jsx'
 
 // A bar chart driven by the Google source via /api/data. Swap the data shape
 // (keys "month"/"value") to match whatever columns your sheet returns.
@@ -72,7 +74,10 @@ dataKey="value"
 stroke={axisColor}
 fontSize={12}
 />
-<Tooltip 
+<Tooltip
+isAnimationActive={false}
+cursor={{ stroke: cursorColor, strokeOpacity: .4 }}
+content={<CustomTooltip />}
 />
 <Line 
 dataKey="value" 

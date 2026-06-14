@@ -2,6 +2,7 @@ import {
   ResponsiveContainer,
   BarChart,
   Bar,
+  LabelList,
   Cell,
   XAxis,
   YAxis,
@@ -16,8 +17,11 @@ import {
 	barHighlight1,
 	barHighlight2,
 	xAxisPaddingLess,	 
-	xAxisPaddingMore
+	xAxisPaddingMore,
+	labelColor,
+	cursorColor
 } from './chartTheme.js'
+import CustomTooltip from './CustomTooltip.jsx'
 
 // A bar chart driven by the Google source via /api/data. Swap the data shape
 // (keys "month"/"value") to match whatever columns your sheet returns.
@@ -74,7 +78,10 @@ dataKey="value"
 stroke={axisColor}
 fontSize={12}
 />
-<Tooltip 
+<Tooltip
+isAnimationActive={false}
+cursor={{ fill: cursorColor, fillOpacity: .15 }}
+content={<CustomTooltip />}
 />
 <Bar 
 dataKey="value" 
@@ -88,6 +95,12 @@ radius={[4, 4, 0, 0]}
     : barColor                                // else default
   return <Cell key={i} fill={fill} />
 })}
+<LabelList 
+dataKey="value" 
+position="top" 
+fill={labelColor} 
+fontSize={12} 
+formatter={v => `$${v}`} />
 </Bar>
 </BarChart>
 </ResponsiveContainer>

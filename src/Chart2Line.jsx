@@ -16,7 +16,16 @@ import {
 	xAxisPaddingMore,
 	lineColor,
 	lineWidth,
-	cursorColor
+	dotFillColor,
+	activeDotFillColor,
+	dotStrokeColor,
+	activeDotStrokeColor,
+	dotStrokeWidth,
+	activeDotStrokeWidth,
+	dotRadius,
+	activeDotRadius,
+	cursorColor,
+	cursorOpacityLineChart
 } from './chartTheme.js'
 import CustomTooltip from './CustomTooltip.jsx'
 
@@ -74,16 +83,17 @@ dataKey="value"
 stroke={axisColor}
 fontSize={12}
 />
-<Tooltip
-isAnimationActive={false}
-cursor={{ stroke: cursorColor, strokeOpacity: .4 }}
-content={<CustomTooltip />}
-/>
 <Line 
 dataKey="value" 
 stroke={lineColor}
 strokeWidth={lineWidth} 
-radius={[4, 4, 0, 0]} 
+dot={{ fill: dotFillColor, stroke: dotStrokeColor, strokeWidth: dotStrokeWidth, r: dotRadius }} 
+activeDot={{ fill: activeDotFillColor, stroke: activeDotStrokeColor, strokeWidth: activeDotStrokeWidth, r: activeDotRadius }} 
+/>
+<Tooltip
+isAnimationActive={false}
+cursor={{ stroke: cursorColor, strokeOpacity: cursorOpacityLineChart }}
+content={<CustomTooltip />}
 />
 </LineChart>
 </ResponsiveContainer>

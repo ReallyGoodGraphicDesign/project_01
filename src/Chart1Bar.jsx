@@ -12,6 +12,7 @@ import {
 import useSheetData from './useSheetData.js'
 import { 
 	axisColor, 
+	yAxisDomain,
 	gridColor, 
 	barColor,
 	barHighlight1,
@@ -19,12 +20,12 @@ import {
 	xAxisPaddingLess,	 
 	xAxisPaddingMore,
 	labelColor,
-	cursorColor
+	cursorColor,
+	cursorOpacityBarChart
 } from './chartTheme.js'
 import CustomTooltip from './CustomTooltip.jsx'
 
-// A bar chart driven by the Google source via /api/data. Swap the data shape
-// (keys "month"/"value") to match whatever columns your sheet returns.
+// A bar chart driven by the Google source via /api/data. Swap the data shape (keys "month"/"value") to match whatever columns your sheet returns.
 function Chart1Bar() {
   const { data, loading, error } = useSheetData()
 
@@ -77,10 +78,11 @@ hide
 dataKey="value"
 stroke={axisColor}
 fontSize={12}
+domain={yAxisDomain}
 />
 <Tooltip
 isAnimationActive={false}
-cursor={{ fill: cursorColor, fillOpacity: .15 }}
+cursor={{ fill: cursorColor, fillOpacity: cursorOpacityBarChart }}
 content={<CustomTooltip />}
 />
 <Bar 

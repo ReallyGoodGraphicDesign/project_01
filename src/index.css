@@ -43,3 +43,13 @@ text-transform: uppercase;
 .recharts-legend-item svg {
   margin-right: 12px !important;
 }
+
+/* Draw line-chart dot strokes beneath their fill, so the full dot radius shows
+   and the stroke sits outside the disc instead of covering its inner half. */
+.recharts-line-dot {
+  paint-order: stroke;
+}
+
+.recharts-active-dot {
+  paint-order: stroke;
+}

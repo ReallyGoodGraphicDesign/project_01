@@ -10,14 +10,13 @@ function ContentSection2({ id, title, subtitle, children, text, className = " " 
 	scroll-mt-[76px] 
 	rounded-[0.25rem] 
 	bg-zinc-500 
-	hover:bg-zinc-500/85
-	p-4 
+	hover:bg-zinc-500/80
+	p-10 
 	shadow-[0px_20px_30px_-10px]
 	shadow-zinc-600 
 	transition 
 	duration-300 
 	hover:-translate-y-[1px] 
-	sm:p-10 
 	${className}`}>
       <header className="mb-6 flex flex-col gap-2">
         <TextStyleSectionGroup

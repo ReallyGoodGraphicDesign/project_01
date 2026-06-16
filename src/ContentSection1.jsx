@@ -3,7 +3,7 @@ import TextStyleSectionTitle from './TextStyleSectionTitle.jsx'
 import TextStyleSectionSubtitle from './TextStyleSectionSubtitle.jsx' 
 import TextStyleBody from './TextStyleBody.jsx'
 
-function ContentSection({ id, group, title, subtitle, children, text, className = " " }) {
+function ContentSection1({ id, group, title, subtitle, children, text, className = " " }) {
   return (
     <section id={id} 
 	className={`
@@ -11,16 +11,24 @@ function ContentSection({ id, group, title, subtitle, children, text, className 
 	rounded-[0.25rem] 
 	bg-zinc-500 
 	hover:bg-zinc-500/80 
-	p-4 
+	p-10
 	shadow-[0px_20px_30px_-10px]
 	shadow-zinc-600 
 	transition 
 	duration-300 
 	hover:-translate-y-[1px] 
-	sm:p-10 
-	${className}`}>
+	${className}
+	`}>
       <header className="mb-6 flex flex-col gap-2">
-        {group ? <TextStyleSectionGroup>{group}</TextStyleSectionGroup> : null}
+        {group ? 
+		<TextStyleSectionGroup>
+			{group}
+		</TextStyleSectionGroup> 
+		: 
+		<TextStyleSectionGroup
+			children="DEFAULT TEXT" 
+		/>
+		}
         {title ? <TextStyleSectionTitle>{title}</TextStyleSectionTitle> : null}
         {subtitle ? <TextStyleSectionSubtitle>{subtitle}</TextStyleSectionSubtitle> : null}
       </header>
@@ -31,4 +39,4 @@ function ContentSection({ id, group, title, subtitle, children, text, className 
   )
 }
 
-export default ContentSection
+export default ContentSection1

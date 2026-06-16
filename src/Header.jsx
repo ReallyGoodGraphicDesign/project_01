@@ -47,7 +47,7 @@ function CloseIcon() {
   );
 }
 
-function Header() {
+function Header({className = " "}) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const handleNavClick = () => {
@@ -57,7 +57,7 @@ function Header() {
 return (
 <header 
 
-className="
+className={`
 sticky 
 top-0 
 z-[1100] 
@@ -65,7 +65,8 @@ w-full
 bg-zinc-400 
 text-zinc-100 
 shadow-[0_10px_50px_rgba(0,0,0,.5)]
-">
+${className}
+`}>
 	<div 
 	className="
 	mx-auto 
@@ -92,7 +93,7 @@ shadow-[0_10px_50px_rgba(0,0,0,.5)]
 			no-underline 
 			transition-colors 
 			duration-500 
-			hover:bg-orange-700 
+			hover:bg-lime-600 
 			active:bg-white/20"
 			>
 				{label}

@@ -18,16 +18,30 @@ flex
 min-h-screen 
 max-w-[100%] 
 flex-col 
-gap-5 
+gap-1.5
+sm:gap-1.5 
+md:gap-2
+lg:gap-3
+xl:gap-3.5
 p-1.5 
 sm:p-2 
 md:p-2.5
 lg:p-3
 xl:p-3.5
 ">
-<header className="">
+<header 
+className="
+pb-0
+mb-0
+my-0
+py-0
+">
 <h1  
 className="
+pb-0
+mb-0
+my-0
+py-0
 text-4xl 
 sm:text-4xl
 md:text-5xl
@@ -36,12 +50,14 @@ font-semibold
 tracking-tight 
 text-white 
 ">
-Reusable content sections
+MAIN BRANCH
 </h1>
 
 </header>
 <div 
 className="
+mt-0
+pt-0
 grid 
 grid-cols-1	
 lg:grid-cols-2

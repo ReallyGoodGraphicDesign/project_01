@@ -1,13 +1,11 @@
 import { useState } from 'react';
 
 const navItems = [
-  { href: '#chart-1', label: 'Charts' },
-  { href: '#map-1', label: 'Maps' },
-  { href: '#section-3', label: 'Tab Three' },
-  { href: '#section-4', label: 'Tab Four' },
-  { href: '#section-5', label: 'Tab Five' },
-  { href: '#section-6', label: 'Tab Six' },
-  { href: '#contact_form', label: 'Contact' },
+  { href: '#bar-chart', label: 'Bar Chart' },
+  { href: '#line-chart', label: 'Line Chart' },
+  { href: '#pie-chart', label: 'Pie Chart' },
+  { href: '#map-1', label: 'Map' },
+  { href: '#contact_form', label: 'Contact' }
 ];
 
 function HamburgerIcon() {
@@ -78,7 +76,7 @@ ${className}
 	px-0 
 	max-lg:justify-end
 	">
-		<nav className=" h-full flex-1 items-center justify-around uppercase lg:flex">
+		<nav className=" h-full flex-1 items-center justify-around uppercase hidden lg:flex">
 		{navItems.map(({ href, label }) => (
 			<a
 			key={href}
@@ -90,10 +88,11 @@ ${className}
 			text-center 
 			leading-tight 
 			text-zinc-100 
+			text-sm
 			no-underline 
 			transition-colors 
 			duration-500 
-			hover:bg-lime-600 
+			hover:bg-lime-600/75 
 			active:bg-white/20"
 			>
 				{label}
@@ -102,7 +101,7 @@ ${className}
 		</nav>
 		<button
 		type="button"
-		className="flex items-center p-1 text-zinc-100 lg:hidden"
+		className="flex items-center p-1 text-zinc-100 lg:hidden mr-2"
 		onClick={() => setMenuOpen(true)}
 		aria-label="Open menu"
 		>
@@ -111,22 +110,22 @@ ${className}
 	</div>
 
 	{menuOpen && (
-	<div className="fixed inset-0 z-[2000] flex flex-col items-center justify-center bg-zinc-900">
+	<div className="fixed inset-0 z-[2000] flex flex-col items-center justify-center bg-lime-700/100">
 		<button
 		type="button"
-		className="absolute right-4 top-4 flex items-center p-1 text-zinc-100"
+		className="absolute right-1.5 top-1.5 flex items-center p-1 text-zinc-100"
 		onClick={() => setMenuOpen(false)}
 		aria-label="Close menu"
 		>
 			<CloseIcon />
 		</button>
-		<nav className="flex flex-col gap-5 text-center">
+		<nav className="flex flex-col gap-20 text-center">
 		{navItems.map(({ href, label }) => (
 			<a
 			key={href}
 			href={href}
 			onClick={handleNavClick}
-			className="mb-5 text-2xl uppercase text-zinc-100 no-underline"
+			className="text-2xl uppercase text-zinc-100 no-underline"
 			>
 				{label}
 			</a>

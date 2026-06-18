@@ -3,11 +3,11 @@ import TextStyleSectionTitle from './TextStyleSectionTitle.jsx'
 import TextStyleSectionSubtitle from './TextStyleSectionSubtitle.jsx' 
 import TextStyleBody from './TextStyleBody.jsx'
 
-function ContentSection1({ id, group, title, subtitle, children, text, className = " " }) {
+function ContentSection1({ id, group, unusedOverride, title, subtitle, children, text, className = " " }) {
   return (
     <section id={id} 
 	className={`
-	scroll-mt-[76px] 
+	scroll-mt-[60px] 
 	rounded-[0.25rem] 
 	bg-zinc-500 
 	hover:bg-zinc-500/80 
@@ -21,13 +21,14 @@ function ContentSection1({ id, group, title, subtitle, children, text, className
 	`}>
       <header className="mb-6 flex flex-col gap-2">
         {group ? 
-		<TextStyleSectionGroup>
+		<TextStyleSectionGroup >
 			{group}
 		</TextStyleSectionGroup> 
 		: 
-		<TextStyleSectionGroup
-			children="DEFAULT TEXT" 
-		/>
+		unusedOverride ? 
+		<TextStyleSectionGroup children="DEFAULT TEXT" />
+		: 
+		null	
 		}
         {title ? <TextStyleSectionTitle>{title}</TextStyleSectionTitle> : null}
         {subtitle ? <TextStyleSectionSubtitle>{subtitle}</TextStyleSectionSubtitle> : null}

@@ -1,21 +1,29 @@
 import {
-  LineChart,
-  Line,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  ResponsiveContainer,
+	LineChart,
+	Line,
+	LabelList,
+	XAxis,
+	YAxis,
+	CartesianGrid,
+	Tooltip,
+	ResponsiveContainer,
 } from 'recharts'
-import useSheetData from './useSheetData.js'
+import 
+	useSheetData 
+from './useSheetData.js'
 import { 
+	containerBorderColor,	
+	containerBorderWidth,
+	containerFill,
 	axisColor, 
 	gridColor, 
 	barColor,
 	xAxisPaddingLess,
 	xAxisPaddingMore,
+	yAxisDomain,
 	lineColor,
 	lineWidth,
+	labelColor,
 	dotFillColor,
 	activeDotFillColor,
 	dotStrokeColor,
@@ -55,7 +63,11 @@ return (
 className="
 h-[400px] w-full
 ">
-<ResponsiveContainer width="100%" height="100%">
+<ResponsiveContainer 
+	width="100%" 
+	height="100%"
+	style={{ border: `${containerBorderWidth}px solid ${containerBorderColor}`, backgroundColor: containerFill }}
+>
 <LineChart
 data={data} 
 margin={{ top: 0, right: 0, bottom: 0, left: 0 }} 
@@ -82,6 +94,7 @@ hide
 dataKey="value"
 stroke={axisColor}
 fontSize={12}
+domain={[0.5, 5]}
 />
 <Line 
 dataKey="value" 
@@ -89,8 +102,16 @@ stroke={lineColor}
 strokeWidth={lineWidth} 
 dot={{ fill: dotFillColor, stroke: dotStrokeColor, strokeWidth: dotStrokeWidth, r: dotRadius }} 
 activeDot={{ fill: activeDotFillColor, stroke: activeDotStrokeColor, strokeWidth: activeDotStrokeWidth, r: activeDotRadius }} 
-/>
+>
+<LabelList 
+dataKey="value" 
+position="top" 
+offset={20}
+fill={labelColor} 
+fontSize={12} />
+</Line>
 <Tooltip
+hidden
 isAnimationActive={false}
 cursor={{ stroke: cursorColor, strokeOpacity: cursorOpacityLineChart }}
 content={<CustomTooltip />}

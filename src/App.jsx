@@ -18,10 +18,10 @@ flex
 min-h-screen 
 max-w-[100%] 
 flex-col 
-gap-10 
+gap-5 
 p-4 
 ">
-<header hidden className="space-y-4 text-center">
+<header className="">
 <h1  
 className="
 text-5xl 
@@ -32,85 +32,64 @@ sm:text-6xl
 ">
 Reusable content sections
 </h1>
-<p  
-className=" 
-mx-auto 
-max-w-3xl 
-text-base 
-text-zinc-100 
-sm:text-lg
-">
-The header (the links), above, is a component. The title directly above this text, and this text, and all of the content sections are in a 'main' element - there is no 'main' component. 
-</p>
+
 </header>
 
-<div className="grid grid-cols-2 gap-4">
+<div 
+className="
+grid 
+grid-cols-1
+lg:grid-cols-2
+gap-4
+">
 
 <ContentSection1
-id="chart-1"
-group="UNIQUE OVERRIDE TEXT - CHARLIE PARKER"
-title="Chart One - Bar"
-subtitle="Recharts, fed by a Cloudflare Pages Function proxy" >
+id="bar-chart"
+group=""
+unusedOverride=""
+hideGroup="If you want unique text in 'group', add it in 'group'. If you want default text (as specified in the master component) in 'group', ensure 'group' is empty and unusedOverride is NOT empty - even a space character will suffice, or you can move the 'group' text to 'unusedOR'. If you want the entire group gonzo, ensure 'group' and 'unusedOverride' are both empty and hideGroup is NOT empty. "
+title="Bar Chart"
+subtitle="Recharts, fed by a Cloudflare Pages Function proxy" 
+>
 <Chart1Bar />
 </ContentSection1>
 
 <ContentSection1 
-id="chart-2"     
-group="UNIQUE OVERRIDE TEXT - JOE ZAWINUL"
-title="Chart Two - Line"
+id="line-chart"     
+group=""
+unusedOverride=""
+hideGroup="If you want unique text in 'group', add it in 'group'. If you want default text (as specified in the master component) in 'group', ensure 'group' is empty and unusedOverride is NOT empty - even a space character will suffice, or you can move the 'group' text to 'unusedOR'. If you want the entire group gonzo, ensure 'group' and 'unusedOverride' are both empty and hideGroup is NOT empty. "
+title="Line Chart"
 subtitle="Recharts, fed by a Cloudflare Pages Function proxy" >
 <Chart2Line />
 </ContentSection1>
 
 <ContentSection1
-id="chart-3"
-group="UNIQUE OVERRIDE TEXT - LADY SOVEREIGN"
-title="Chart Three - Pie"
+id="pie-chart"
+group=""
+unusedOverride=""
+hideGroup="If you want unique text in 'group', add it in 'group'. If you want default text (as specified in the master component) in 'group', ensure 'group' is empty and unusedOverride is NOT empty - even a space character will suffice, or you can move the 'group' text to 'unusedOR'. If you want the entire group gonzo, ensure 'group' and 'unusedOverride' are both empty and hideGroup is NOT empty. "
+title="Pie Chart"
 subtitle="Recharts, fed by a Cloudflare Pages Function proxy" >
 <Chart3Pie />
 </ContentSection1>
 
 <ContentSection1 
 id="map-1"
-group="UNIQUE OVERRIDE TEXT - LADY GAGA"
-title="Pin map"
+group=""
+unusedOverride=""
+hideGroup="If you want unique text in 'group', add it in 'group'. If you want default text (as specified in the master component) in 'group', ensure 'group' is empty and unusedOverride is NOT empty - even a space character will suffice, or you can move the 'group' text to 'unusedOR'. If you want the entire group gonzo, ensure 'group' and 'unusedOverride' are both empty and hideGroup is NOT empty. "
+title="Map One"
 subtitle="Leaflet + OpenStreetMap, centered on Portland" >
 <PinMap />
 </ContentSection1>
 
 <ContentSection1
-id="section-3"
-group="UNIQUE OVERRIDE TEXT - WIZ KALIFA"
-title="Title (typed in app)"
-subtitle="Subtitle (typed in app)"
-text="Body text (typed in app)" />
-
-<ContentSection1
-id="section-4"
-group="UNIQUE OVERRIDE TEXT - NURSE WITH WOUND"
-title="Title (typed in app)"
-subtitle="Subtitle (typed in app)"
-text="Body text (typed in app)" />
-
-<ContentSection1
-id="section-5"
-group="UNIQUE OVERRIDE TEXT - HANK WILLIAMS"
-title="Title (typed in app)"
-subtitle="App: Subtitle"
-text="App: Body" />
-
-<ContentSection1
- 
-id="section-6"
-group="UNIQUE OVERRIDE TEXT - GILLIAN WELCH"
-title="Title (typed in app)"
-subtitle="App: Subtitle"
-text="App: Body" />
-
-<ContentSection1
 id="contact_form"
-group="UNIQUE OVERRIDE TEXT - BRENT HINDS"
-title="Form"
+group=""
+unusedOverride=""
+hideGroup="If you want unique text in 'group', add it in 'group'. If you want default text (as specified in the master component) in 'group', ensure 'group' is empty and unusedOverride is NOT empty - even a space character will suffice, or you can move the 'group' text to 'unusedOR'. If you want the entire group gonzo, ensure 'group' and 'unusedOverride' are both empty and hideGroup is NOT empty. "
+title="Contact Form"
 subtitle="Please contact me. It's urgent." >
 <ContactForm />
 </ContentSection1>

@@ -1,22 +1,27 @@
 import {
-  ResponsiveContainer,
-  BarChart,
-  Bar,
-  LabelList,
-  Cell,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
+	ResponsiveContainer,
+	BarChart,
+	Bar,
+	LabelList,
+	Cell,
+	XAxis,
+	YAxis,
+	CartesianGrid,
+	Tooltip,
 } from 'recharts'
 import useSheetData from './useSheetData.js'
 import { 
+	containerBorderColor,	
+	containerBorderWidth,
+	containerFill,
 	axisColor, 
 	yAxisDomain,
 	gridColor, 
 	barColor,
 	barHighlight1,
 	barHighlight2,
+	barBorderColor,
+	barBorderWidth,
 	xAxisPaddingLess,	 
 	xAxisPaddingMore,
 	labelColor,
@@ -50,7 +55,11 @@ return (
 className="
 h-[400px] w-full
 ">
-<ResponsiveContainer width="100%" height="100%">
+<ResponsiveContainer 
+	width="100%" 
+	height="100%"
+	style={{ border: `${containerBorderWidth}px solid ${containerBorderColor}`, backgroundColor: containerFill }}
+>
 <BarChart
 data={data} 
 margin={{ top: 0, right: 0, bottom: 0, left: 0 }} 
@@ -65,31 +74,18 @@ stroke={gridColor}
 fill="red"
 fillOpacity={0}
 />
-<XAxis 
-dataKey="month"
-tickLine={false}
-stroke={axisColor}
-fontSize={12}
-unit="" 
-padding={xAxisPaddingLess}
-/>
-<YAxis 
-hide
-dataKey="value"
-stroke={axisColor}
-fontSize={12}
-domain={yAxisDomain}
-/>
 <Tooltip
 isAnimationActive={false}
 cursor={{ fill: cursorColor, fillOpacity: cursorOpacityBarChart }}
 content={<CustomTooltip />}
 />
-<Bar 
-dataKey="value" 
-fill={barColor} 
+<Bar
+dataKey="value"
+fill={barColor}
+stroke={barBorderColor}
+strokeWidth={barBorderWidth}
 radius={[4, 4, 0, 0]}
-> 
+>
 {data.map((d, i) => {
   const fill =
     d.month === 'Mar'  ? barHighlight1   // chosen bar wins
@@ -104,6 +100,21 @@ fill={labelColor}
 fontSize={12} 
 formatter={v => `$${v}`} />
 </Bar>
+<XAxis 
+dataKey="month"
+tickLine={false}
+stroke={axisColor}
+fontSize={12}
+unit="" 
+padding={xAxisPaddingLess}
+/>
+<YAxis 
+hide
+dataKey="value"
+stroke={axisColor}
+fontSize={12}
+domain={[0, 70]}
+/>
 </BarChart>
 </ResponsiveContainer>
 </div>

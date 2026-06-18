@@ -1,6 +1,14 @@
 const readCssVar = (name) =>
   getComputedStyle(document.documentElement).getPropertyValue(name).trim()
 
+// RESPONSIVE CONTAINER
+// container fill
+export const containerFill = readCssVar('--color-fuchsia-700/0')
+// container border color
+export const containerBorderColor = readCssVar('--color-zinc-100')
+// container border width
+export const containerBorderWidth = 0
+
 // AXIS
 // axis line, tick, labels color
 export const axisColor = readCssVar('--color-zinc-300')
@@ -16,10 +24,14 @@ export const barColor = readCssVar('--color-lime-900')
 export const barHighlight1 = readCssVar('--color-cyan-700')
 // bar highlight color based on value
 export const barHighlight2 = readCssVar('--color-cyan-800')
+// per-bar border color
+export const barBorderColor = readCssVar('--color-zinc-100')
+// per-bar border width
+export const barBorderWidth = 0
 
 // LINE
 // y axis domain
-export const yAxisDomain = dataMax + 40
+export const yAxisDomain = [0, 'dataMax + 20']
 // line color
 export const lineColor = readCssVar('--color-cyan-600')
 // line width
@@ -64,12 +76,16 @@ export const cursorOpacityLineChart = .25
 // PIE
 // slice colors, cycled across slices (one per data point)
 export const pieColors = [
-  readCssVar('--color-cyan-700'),
-  readCssVar('--color-cyan-500'),
+  readCssVar('--color-cyan-600'),
   readCssVar('--color-lime-600'),
-  readCssVar('--color-lime-900'),
-  readCssVar('--color-zinc-500'),
-  readCssVar('--color-zinc-300'),
+  readCssVar('--color-zinc-600'),
+  readCssVar('--color-cyan-500'),
+  readCssVar('--color-lime-500'),
+  readCssVar('--color-zinc-400'),
 ]
+// per-slice border color
+export const pieBorderColor = readCssVar('--color-zinc-100')
+// per-slice border width
+export const pieBorderWidth = .5
 
 

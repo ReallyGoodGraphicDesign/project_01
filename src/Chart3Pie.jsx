@@ -1,13 +1,20 @@
 import {
-  PieChart,
-  Pie,
-  Cell,
-  Tooltip,
-  Legend,
-  ResponsiveContainer,
+	PieChart,
+	Pie,
+	Cell,
+	Tooltip,
+	Legend,
+	ResponsiveContainer,
 } from 'recharts'
 import useSheetData from './useSheetData.js'
-import { pieColors } from './chartTheme.js'
+import { 
+	containerBorderColor,	
+	containerBorderWidth,
+	containerFill,
+	pieColors,
+	pieBorderColor,
+	pieBorderWidth
+} from './chartTheme.js'
 
 // A pie chart driven by a Google sheet via /api/data3. To light up the live
 // data you'll need the matching backend, mirroring data2:
@@ -35,30 +42,36 @@ function Chart3Pie() {
     )
   }
 
-  return (
-    <div className="h-[400px] w-full">
-      <ResponsiveContainer width="100%" height="100%">
-        <PieChart>
-          <Pie
-            data={data}
-            dataKey="value"
-            nameKey="name"
-            startAngle={90}
-            endAngle={-270}
-            outerRadius="80%"
-            label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
-            labelLine={false}
-          >
-            {data.map((d, i) => (
-              <Cell key={i} fill={pieColors[i % pieColors.length]} />
-            ))}
-          </Pie>
-          <Tooltip />
-          <Legend layout="vertical" align="right" verticalAlign="middle" />
-        </PieChart>
-      </ResponsiveContainer>
-    </div>
-  )
-}
+return (
+	<div className="h-[400px] w-full">
+	<ResponsiveContainer
+	width="100%"
+	height="100%"
+	style={{ border: `${containerBorderWidth}px solid ${containerBorderColor}`, backgroundColor: containerFill }}
+	>
+	<PieChart>
+	<Pie
+	data={data}
+	dataKey="value"
+	nameKey="name"
+	startAngle={90}
+	endAngle={-270}
+	outerRadius="80%"
+	stroke={pieBorderColor}
+	strokeWidth={pieBorderWidth}
+	label={({ percent }) => `${(percent * 100).toFixed(0)}%`}
+	labelLine={false}
+	>
+	{data.map((d, i) => (
+		<Cell key={i} fill={pieColors[i % pieColors.length]} />
+	))}
+	</Pie>
+	<Tooltip />
+	<Legend layout="vertical" align="right" verticalAlign="middle" />
+	</PieChart>
+	</ResponsiveContainer>
+	</div>
+	)
+	}
 
 export default Chart3Pie

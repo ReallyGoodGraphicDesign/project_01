@@ -11,12 +11,17 @@ function ContentSection1({ id, group, unusedOverride, title, subtitle, children,
 	rounded-[0.25rem] 
 	bg-zinc-500 
 	hover:bg-zinc-500/80 
-	p-10
 	shadow-[0px_20px_30px_-10px]
-	shadow-zinc-600 
+	shadow-zinc-600/0 
 	transition 
 	duration-300 
 	hover:-translate-y-[1px] 
+	p-5
+	sm:p-5
+	md:p-5.5
+	lg:p-6
+	xl:p-6.5
+	2xl:p-7	
 	${className}
 	`}>
       <header className="mb-6 flex flex-col gap-2">

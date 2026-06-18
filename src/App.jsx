@@ -19,28 +19,37 @@ min-h-screen
 max-w-[100%] 
 flex-col 
 gap-5 
-p-4 
+p-1.5 
+sm:p-2 
+md:p-2.5
+lg:p-3
+xl:p-3.5
 ">
 <header className="">
 <h1  
 className="
-text-5xl 
+text-4xl 
+sm:text-4xl
+md:text-5xl
+lg:text-6xl
 font-semibold 
 tracking-tight 
 text-white 
-sm:text-6xl
 ">
 Reusable content sections
 </h1>
 
 </header>
-
 <div 
 className="
 grid 
-grid-cols-1
+grid-cols-1	
 lg:grid-cols-2
-gap-4
+gap-1.5
+sm:gap-2
+md:gap-2.5
+lg:gap-3
+xl:gap-3.5
 ">
 
 <ContentSection1

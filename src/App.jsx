@@ -50,7 +50,7 @@ font-semibold
 tracking-tight 
 text-white 
 ">
-MAIN BRANCH
+HEADLINE VARS BRANCH
 </h1>
 
 </header>

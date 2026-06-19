@@ -50,7 +50,7 @@ font-semibold
 tracking-tight 
 text-white 
 ">
-HEADLINE VARSity blues
+Charts & Whatnot
 </h1>
 
 </header>

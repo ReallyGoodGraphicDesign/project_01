@@ -50,7 +50,7 @@ font-semibold
 tracking-tight 
 text-white 
 ">
-HEADLINE VARS BRANCH
+HEADLINE VARSity blues
 </h1>
 
 </header>
